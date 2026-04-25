@@ -24,3 +24,10 @@ def actualizar_cantidad(nombre, nueva_cantidad):
             p["cantidad"] = nueva_cantidad
             return True
     return False
+
+def eliminar_producto(nombre):
+    for p in inventario:
+        if p["nombre"].lower() == nombre.lower():
+            inventario.remove(p)
+            return True
+    return False
