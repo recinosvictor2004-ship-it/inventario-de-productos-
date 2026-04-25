@@ -31,3 +31,7 @@ def eliminar_producto(nombre):
             inventario.remove(p)
             return True
     return False
+
+def valor_total():
+    total = sum(p["precio"] * p["cantidad"] for p in inventario)
+    return total
